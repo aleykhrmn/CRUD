@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1D7D3DD4-6368-420B-849A-70CA57AE6854}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ekranlar\Anasayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ekranlar\Anasayfa.Designer.cs">
+      <DependentUpon>Anasayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran3\BolumGuncelleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran3\BolumGuncelleme.Designer.cs">
+      <DependentUpon>BolumGuncelleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran3\Bolum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran3\Bolum.Designer.cs">
+      <DependentUpon>Bolum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran3\BolumEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran3\BolumEkle.Designer.cs">
+      <DependentUpon>BolumEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran3\BolumListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran3\BolumListele.Designer.cs">
+      <DependentUpon>BolumListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran3\BolumSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran3\BolumSil.Designer.cs">
+      <DependentUpon>BolumSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AppDbContext.cs" />
+    <Compile Include="Ekranlar\Ekran2\DersEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran2\DersEkle.Designer.cs">
+      <DependentUpon>DersEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran2\Ders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran2\Ders.Designer.cs">
+      <DependentUpon>Ders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran4\DersAtama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran4\DersAtama.Designer.cs">
+      <DependentUpon>DersAtama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran4\DersDegistirme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran4\DersDegistirme.Designer.cs">
+      <DependentUpon>DersDegistirme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran2\DersGuncelleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran2\DersGuncelleme.Designer.cs">
+      <DependentUpon>DersGuncelleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran2\DersListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran2\DersListele.Designer.cs">
+      <DependentUpon>DersListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran2\DersSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran2\DersSil.Designer.cs">
+      <DependentUpon>DersSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran5\Ekran5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran5\Ekran5.Designer.cs">
+      <DependentUpon>Ekran5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran6\Ekran6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran6\Ekran6.Designer.cs">
+      <DependentUpon>Ekran6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FakulteEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FakulteEkle.Designer.cs">
+      <DependentUpon>FakulteEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="foy5DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>foy5DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="föy5DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>föy5DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran4\Kayıt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran4\Kayıt.Designer.cs">
+      <DependentUpon>Kayıt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Bolum.cs" />
+    <Compile Include="Models\Ders.cs" />
+    <Compile Include="Models\Fakulte.cs" />
+    <Compile Include="Migrations\202405211153418_InitialCreate.cs" />
+    <Compile Include="Migrations\202405211153418_InitialCreate.Designer.cs">
+      <DependentUpon>202405211153418_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Ogrenci.cs" />
+    <Compile Include="Models\OgrenciDers.cs" />
+    <Compile Include="Ekranlar\Ekran5\ODersListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran5\ODersListesi.Designer.cs">
+      <DependentUpon>ODersListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran1\Ogrenci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran1\Ogrenci.Designer.cs">
+      <DependentUpon>Ogrenci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran1\OgrenciEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran1\OgrenciEkle.Designer.cs">
+      <DependentUpon>OgrenciEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran1\OgrenciGüncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran1\OgrenciGüncelle.Designer.cs">
+      <DependentUpon>OgrenciGüncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran4\OgrenciKayıtSilme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran4\OgrenciKayıtSilme.Designer.cs">
+      <DependentUpon>OgrenciKayıtSilme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran1\OgrenciListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran1\OgrenciListele.Designer.cs">
+      <DependentUpon>OgrenciListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran1\OgrenciSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran1\OgrenciSil.Designer.cs">
+      <DependentUpon>OgrenciSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ekranlar\Ekran5\YBListe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ekranlar\Ekran5\YBListe.Designer.cs">
+      <DependentUpon>YBListe.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Ekranlar\Anasayfa.resx">
+      <DependentUpon>Anasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ekranlar\Ekran3\BolumGuncelleme.resx">
+      <DependentUpon>BolumGuncelleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ekranlar\Ekran3\Bolum.resx">
+      <DependentUpon>Bolum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ekranlar\Ekran3\BolumEkle.resx">
+      <DependentUpon>BolumEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ekranlar\Ekran3\BolumListele.resx">
+      <DependentUpon>BolumListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ekranlar\Ekran3\BolumSil.resx">
+      <DependentUpon>BolumSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ekranlar\Ekran2\DersEkle.resx">
+      <DependentUpon>DersEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ekranlar\Ekran2\Ders.resx">
+      <DependentUpon>Ders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ekranlar\Ekran4\DersAtama.resx">
+      <DependentUpon>DersAtama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ekranlar\Ekran4\DersDegistirme.resx">
+      <DependentUpon>DersDegistirme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ekranlar\Ekran2\DersGuncelleme.resx">
+      <DependentUpon>DersGuncelleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ekranlar\Ekran2\DersListele.resx">
+      <DependentUpon>DersListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ekranlar\Ekran2\DersSil.resx">
+      <DependentUpon>DersSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ekranlar\Ekran5\Ekran5.resx">
+      <DependentUpon>Ekran5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ekranlar\Ekran6\Ekran6.resx">
+      <DependentUpon>Ekran6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FakulteEkle.resx">
+      <DependentUpon>FakulteEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ekranlar\Ekran4\Kayıt.resx">
+      <DependentUpon>Kayıt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405211153418_InitialCreate.resx">
+      <DependentUpon>202405211153418_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ekranlar\Ekran5\ODersListesi.resx">
+      <DependentUpon>ODersListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ekranlar\Ekran1\Ogrenci.resx">
+      <DependentUpon>Ogrenci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ekranlar\Ekran1\OgrenciEkle.resx">
+      <DependentUpon>OgrenciEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ekranlar\Ekran1\OgrenciGüncelle.resx">
+      <DependentUpon>OgrenciGüncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ekranlar\Ekran4\OgrenciKayıtSilme.resx">
+      <DependentUpon>OgrenciKayıtSilme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ekranlar\Ekran1\OgrenciListele.resx">
+      <DependentUpon>OgrenciListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ekranlar\Ekran1\OgrenciSil.resx">
+      <DependentUpon>OgrenciSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Ekranlar\Ekran5\YBListe.resx">
+      <DependentUpon>YBListe.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="foy5DataSet2.xsc">
+      <DependentUpon>foy5DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="foy5DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>foy5DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="foy5DataSet2.xss">
+      <DependentUpon>foy5DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="föy5DataSet.xsc">
+      <DependentUpon>föy5DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="föy5DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>föy5DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="föy5DataSet.xss">
+      <DependentUpon>föy5DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
